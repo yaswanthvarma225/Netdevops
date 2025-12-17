@@ -1,0 +1,5 @@
+- hosts: all
+  tasks:
+    - name: Enable IP forwarding
+      shell: sysctl -w net.ipv4.ip_forward=1
+

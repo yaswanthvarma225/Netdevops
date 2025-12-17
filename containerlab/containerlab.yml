@@ -1,0 +1,25 @@
+name: netdevops-lab
+topology:
+  nodes:
+    r1:
+      kind: linux
+      image: frrouting/frr
+    fw:
+      kind: linux
+      image: frrouting/frr
+    sw:
+      kind: linux
+      image: alpine
+    host1:
+      kind: linux
+      image: alpine
+    host2:
+      kind: linux
+      image: alpine
+
+  links:
+    - endpoints: ["r1:eth1", "fw:eth1"]
+    - endpoints: ["fw:eth2", "sw:eth1"]
+    - endpoints: ["sw:eth2", "host1:eth1"]
+    - endpoints: ["sw:eth3", "host2:eth1"]
+

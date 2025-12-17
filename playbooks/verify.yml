@@ -1,0 +1,9 @@
+- hosts: all
+  tasks:
+    - name: Check interfaces
+      shell: ip addr
+      register: output
+
+    - debug:
+        var: output.stdout
+

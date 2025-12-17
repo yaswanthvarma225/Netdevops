@@ -1,0 +1,7 @@
+- hosts: routers
+  tasks:
+    - name: Configure IP
+      shell: |
+        ip addr add 172.20.20.100/24 dev eth1
+        ip link set eth1 up
+

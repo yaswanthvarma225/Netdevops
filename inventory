@@ -1,0 +1,10 @@
+[routers]
+r1 ansible_host=clab-netdevops-lab-r1
+
+[firewalls]
+fw ansible_host=clab-netdevops-lab-fw
+
+[all:vars]
+ansible_connection=docker
+ansible_user=root
+

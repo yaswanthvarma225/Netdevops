@@ -1,0 +1,13 @@
+- hosts: firewalls
+  tasks:
+    - name: Configure firewall interfaces
+      shell: |
+        ip addr add 172.20.20.101/24 dev eth1
+        ip addr add 172.20.20.102/24 dev eth2
+        ip link set eth1 up
+        ip link set eth2 up
+
+    - name: Allow forwarding
+      shell: |
+        iptables -P FORWARD ACCEPT
+

@@ -1,0 +1,242 @@
+{
+  "name": "netdevops-lab",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-ecec29de7940",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "3fff:172:20:20::/64",
+        "ipv6-gw": "3fff:172:20:20::1",
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": [],
+  "nodes": {
+    "fw": {
+      "index": "0",
+      "shortname": "fw",
+      "longname": "clab-netdevops-lab-fw",
+      "fqdn": "fw.netdevops-lab.io",
+      "group": "",
+      "labdir": "/home/yaswanth/netdevops/containerlab/clab-netdevops-lab/fw",
+      "kind": "linux",
+      "image": "frrouting/frr",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.6",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::6",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-ecec29de7940",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/yaswanth/netdevops/containerlab/clab-netdevops-lab/fw",
+        "clab-node-longname": "clab-netdevops-lab-fw",
+        "clab-node-name": "fw",
+        "clab-node-type": "",
+        "clab-owner": "yaswanth",
+        "clab-topo-file": "/home/yaswanth/netdevops/containerlab/containerlab.yml",
+        "containerlab": "netdevops-lab"
+      },
+      "port-bindings": [
+      ]
+    },
+    "host1": {
+      "index": "1",
+      "shortname": "host1",
+      "longname": "clab-netdevops-lab-host1",
+      "fqdn": "host1.netdevops-lab.io",
+      "group": "",
+      "labdir": "/home/yaswanth/netdevops/containerlab/clab-netdevops-lab/host1",
+      "kind": "linux",
+      "image": "alpine",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.4",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::4",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-ecec29de7940",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/yaswanth/netdevops/containerlab/clab-netdevops-lab/host1",
+        "clab-node-longname": "clab-netdevops-lab-host1",
+        "clab-node-name": "host1",
+        "clab-node-type": "",
+        "clab-owner": "yaswanth",
+        "clab-topo-file": "/home/yaswanth/netdevops/containerlab/containerlab.yml",
+        "containerlab": "netdevops-lab"
+      },
+      "port-bindings": [
+      ]
+    },
+    "host2": {
+      "index": "2",
+      "shortname": "host2",
+      "longname": "clab-netdevops-lab-host2",
+      "fqdn": "host2.netdevops-lab.io",
+      "group": "",
+      "labdir": "/home/yaswanth/netdevops/containerlab/clab-netdevops-lab/host2",
+      "kind": "linux",
+      "image": "alpine",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.5",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::5",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-ecec29de7940",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/yaswanth/netdevops/containerlab/clab-netdevops-lab/host2",
+        "clab-node-longname": "clab-netdevops-lab-host2",
+        "clab-node-name": "host2",
+        "clab-node-type": "",
+        "clab-owner": "yaswanth",
+        "clab-topo-file": "/home/yaswanth/netdevops/containerlab/containerlab.yml",
+        "containerlab": "netdevops-lab"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r1": {
+      "index": "3",
+      "shortname": "r1",
+      "longname": "clab-netdevops-lab-r1",
+      "fqdn": "r1.netdevops-lab.io",
+      "group": "",
+      "labdir": "/home/yaswanth/netdevops/containerlab/clab-netdevops-lab/r1",
+      "kind": "linux",
+      "image": "frrouting/frr",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::3",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-ecec29de7940",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/yaswanth/netdevops/containerlab/clab-netdevops-lab/r1",
+        "clab-node-longname": "clab-netdevops-lab-r1",
+        "clab-node-name": "r1",
+        "clab-node-type": "",
+        "clab-owner": "yaswanth",
+        "clab-topo-file": "/home/yaswanth/netdevops/containerlab/containerlab.yml",
+        "containerlab": "netdevops-lab"
+      },
+      "port-bindings": [
+      ]
+    },
+    "sw": {
+      "index": "4",
+      "shortname": "sw",
+      "longname": "clab-netdevops-lab-sw",
+      "fqdn": "sw.netdevops-lab.io",
+      "group": "",
+      "labdir": "/home/yaswanth/netdevops/containerlab/clab-netdevops-lab/sw",
+      "kind": "linux",
+      "image": "alpine",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::2",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-ecec29de7940",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/yaswanth/netdevops/containerlab/clab-netdevops-lab/sw",
+        "clab-node-longname": "clab-netdevops-lab-sw",
+        "clab-node-name": "sw",
+        "clab-node-type": "",
+        "clab-owner": "yaswanth",
+        "clab-topo-file": "/home/yaswanth/netdevops/containerlab/containerlab.yml",
+        "containerlab": "netdevops-lab"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "endpoints": {
+        "a": {
+          "node": "r1",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:a0:88:d5",
+          "peer": "z"
+        },
+        "z": {
+          "node": "fw",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:b1:b2:55",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "fw",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:03:3b:02",
+          "peer": "z"
+        },
+        "z": {
+          "node": "sw",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:3b:54:bc",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "sw",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:e8:0e:be",
+          "peer": "z"
+        },
+        "z": {
+          "node": "host1",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:51:5f:0a",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "sw",
+          "interface": "eth3",
+          "mac": "aa:c1:ab:c5:82:c7",
+          "peer": "z"
+        },
+        "z": {
+          "node": "host2",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:30:59:90",
+          "peer": "a"
+        }
+      }
+    }
+  ]
+}
