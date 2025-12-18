@@ -1,0 +1,13 @@
+- hosts: switches
+  become: true
+  tasks:
+    - name: Ensure bridge exists
+      shell: |
+        ip link add br0 type bridge || true
+        ip link set br0 up
+
+    - name: Add eth0 to bridge
+      shell: |
+        ip link set eth0 master br0 || true
+        ip link set eth0 up
+

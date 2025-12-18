@@ -1,13 +1,17 @@
 - hosts: firewalls
-  tasks:
-    - name: Configure firewall interfaces
-      shell: |
-        ip addr add 172.20.20.101/24 dev eth1
-        ip addr add 172.20.20.102/24 dev eth2
-        ip link set eth1 up
-        ip link set eth2 up
+  become: true
+  gather_facts: false
 
-    - name: Allow forwarding
+  tasks:
+    - name: Configure firewall interface (eth0 only)
       shell: |
-        iptables -P FORWARD ACCEPT
+        ip addr flush dev eth0
+        ip addr add 172.20.20.101/24 dev eth0
+        ip link set eth0 up
+
+    - name: Enable IP forwarding
+      shell: sysctl -w net.ipv4.ip_forward=1
+
+    - name: Allow forwarding (basic policy)
+      shell: iptables -P FORWARD ACCEPT
 

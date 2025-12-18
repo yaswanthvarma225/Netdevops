@@ -1,0 +1,12 @@
+- name: Validate connectivity
+  hosts: routers
+  gather_facts: no
+
+  tasks:
+    - name: Show interface state
+      command: ip addr
+      register: out
+
+    - debug:
+        var: out.stdout_lines
+

@@ -1,0 +1,14 @@
+- hosts: host1
+  become: true
+  gather_facts: false
+
+  tasks:
+    - name: Ping host2 from host1
+      command: ping -c 3 172.20.20.111
+      register: ping_result
+      ignore_errors: false
+
+    - name: Show ping output
+      debug:
+        var: ping_result.stdout
+

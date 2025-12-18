@@ -1,0 +1,12 @@
+- name: Basic Network Configuration
+  hosts: routers
+  gather_facts: no
+
+  tasks:
+    - name: Bring interfaces up
+      command: ip link set {{ item }} up
+      loop:
+        - eth1
+        - eth2
+      ignore_errors: yes
+
